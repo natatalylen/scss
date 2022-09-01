@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Raleway&display=swap");
+
+/* BASE ------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  color: #343434;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bree Serif", serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER & FOOTER ----------------------------------------- */
+
+.header-top {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 1em;
+  min-height: 460px;
+  background: url("../i/bg.png") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.slogan-box__title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.slogan-box__content {
+  font-size: 2.25em;
+  color: #fff;
+  margin: 0;
+}
+
+.footer-box {
+  padding: 2rem 1rem;
+  min-height: 100px;
+  background-color: #eee;
+  margin-top: 3.5em;
+}
+.footer-box__copy {
+  text-align: center;
+}
+.footer-box__date {
+  padding: 0 1rem;
+}
+/* CONTAINERS ---------------------------------------------- */
+
+.intro {
+  margin: auto;
+  padding: 1em 1em 3em;
+}
+
+/* COMPONENTS ----------------------------------------------- */
+
+.main-nav {
+  order: -1;
+  margin-top: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 1em;
+  border: 1px solid #eee;
+  border-radius: 0.25em;
+}
+
+.card__title {
+  font-size: 2rem;
+  color: #278da4;
+  margin: 0.35em 0 0;
+  line-height: 1.25;
+}
+
+.btn_info {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75rem 1.54rem;
+  border-radius: 0.354rem;
+  background-color: #278da4;
+  margin-top: auto;
+}
+.btn_info:hover {
+  opacity: 0.8;
+}
+.btn_callout {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.35rem;
+  background-color: #c01f4d;
+  margin-top: auto;
+}
+.btn_callout:hover {
+  opacity: 0.8;
+}
+/* MEDIA QUERIES ------------------------------------------------- */
+
+@media (min-width: 575px) {
+  .slogan-box__title {
+    font-size: 3.4em;
+  }
+  .img-featured {
+    display: none;
+  }
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .slogan-box__title {
+    font-size: 4rem;
+  }
+  .header-top {
+    margin-bottom: 60px;
+  }
+  .header-top::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    border: 6px solid #c01f4d;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    background: url(../i/logo.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .intro {
+    width: 45%;
+  }
+  .card {
+    flex: 0 0 31%;
+  }
+}
